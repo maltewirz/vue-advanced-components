@@ -6,13 +6,11 @@
                 <button @click="selectedComponent = 'Author'">Author</button>
                 <button @click="selectedComponent = 'New'">New</button>
 
-                <component :is="selectedComponent">
-                    <p>Default Content</p>
-                </component>
-                <!-- <Quote>
-                    <h2 slot="title"> {{ quoteTitle }} </h2>
-                    <p slot="content">A wonderful quote!</p>
-                </Quote> -->
+                <keep-alive>
+                    <component :is="selectedComponent">
+                         <p>Default Content</p>
+                    </component>
+                </keep-alive>
             </div>
         </div>
     </div>
