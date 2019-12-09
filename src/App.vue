@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-xs-12">
                 <Quote>
-                    <h2>Quote</h2>
-                    <p>A wonderful quote!</p>
+                    <h2 slot="title"> {{ quoteTitle }} </h2>
+                    <p slot="content">A wonderful quote!</p>
                 </Quote>
             </div>
         </div>
@@ -15,6 +15,11 @@
     import Quote from './components/Quote.vue';
 
     export default {
+        data: function() {
+            return {
+                quoteTitle: 'The quote'
+            }
+        },
         components: {
             Quote
         }
@@ -22,5 +27,7 @@
     }
 </script>
 
-<style>
+<style scoped>
+
+
 </style>
